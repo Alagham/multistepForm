@@ -1,0 +1,228 @@
+/* ===== Global Reset ===== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f5f7fb;
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* ===== Container ===== */
+.container {
+  display: flex;
+  background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(202,248,255,1) 0%, rgba(186,204,227,1) 51.2%, rgba(117,144,179,1) 100.1% );
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  max-width: 900px;
+  width: 100%;
+  overflow: hidden;
+}
+
+/* ===== Sidebar Steps ===== */
+.steps {
+  background:url(./assets/formsidebgimg.jpg)no-repeat center center;
+  background-size: cover;
+  color: #fff;
+  padding: 2rem 1rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.step {
+  padding: 10px 15px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.step.active {
+  background: #b0b0b0;
+  font-weight: bold;
+}
+
+.step:hover {
+  background: #b0b0b0;
+}
+
+/* ===== Form Area ===== */
+.form-area {
+  flex: 2;
+  padding: 2rem;
+}
+
+.form-step {
+  display: none;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.form-step.active {
+  display: flex;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+  font-size: 14px;
+  gap: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"] {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+input:focus {
+  border-color: #b0b0b0;
+  outline: none;
+}
+
+.plans label,
+.form-step label input[type="checkbox"] {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+}
+
+/* ===== Buttons ===== */
+.buttons {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#prevBtn {
+  background: #ccc;
+}
+
+#nextBtn {
+  background: #b0b0b0;
+  color: #fff;
+}
+
+button:hover {
+  opacity: 0.85;
+}
+
+/* ===== Thank You Screen ===== */
+.thank-you {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 1rem;
+  padding: 2rem;
+}
+
+.checkmark {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  display: inline-block;
+  position: relative;
+  box-sizing: content-box;
+}
+
+.checkmark-circle {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  display: block;
+  border: 5px solid #f6750f;
+  animation: scaleIn 0.4s ease forwards;
+}
+
+.checkmark-stem {
+  position: absolute;
+  width: 5px;
+  height: 32px;
+  background-color: #f19904;
+  left: 40px;
+  top: 25px;
+  transform: rotate(45deg) scaleY(0);
+  animation: drawStem 0.4s ease forwards 0.4s;
+}
+
+.checkmark-kick {
+  position: absolute;
+  width: 5px;
+  height: 12px;
+  background-color: #f19904;
+  left: 28px;
+  top: 41px;
+  transform: rotate(-45deg) scaleY(0);
+  animation: drawKick 0.3s ease forwards 0.8s;
+}
+
+/* Animations */
+@keyframes scaleIn {
+  0% { transform: scale(0); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+@keyframes drawStem {
+  0% { transform: rotate(45deg) scaleY(0); }
+  100% { transform: rotate(45deg) scaleY(1); }
+}
+
+@keyframes drawKick {
+  0% { transform: rotate(-45deg) scaleY(0); }
+  100% { transform: rotate(-45deg) scaleY(1); }
+}
+
+
+.hidden {
+  display: none;
+}
+
+/* ===== Progress Bar ===== */
+.progress-container {
+  background: #e5e7eb;
+  border-radius: 10px;
+  height: 8px;
+  width: 100%;
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+
+#progressBar {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg, #b0b0b0, #b0b0b0);
+  transition: width 0.4s ease;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .steps {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+}

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Multi-Step Form</title>
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+  <main class="container">
+    <!-- Sidebar / Step indicator -->
+    <aside class="steps">
+      <div class="step active" data-step="1">1. Info</div>
+      <div class="step" data-step="2">2. Plan</div>
+      <div class="step" data-step="3">3. Add-ons</div>
+      <div class="step" data-step="4">4. Summary</div>
+    </aside>
+
+    <section class="form-area">
+  <!-- Progress Bar -->
+  <div class="progress-container">
+    <div id="progressBar"></div>
+  </div>
+
+  <form id="multiStepForm">
+    <!-- Steps remain the same -->
+
+    <!-- Form area -->
+    <section class="form-area">
+      <form id="multiStepForm">
+
+        <!-- Step 1 -->
+        <div class="form-step active">
+          <h2>Personal Info</h2>
+          <p>Please provide your details.</p>
+          <label>Full Name
+            <input type="text" name="name" required>
+          </label>
+          <label>Email Address
+            <input type="email" name="email" required>
+          </label>
+          <label>Phone Number
+            <input type="tel" name="phone" required>
+          </label>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="form-step">
+          <h2>Select Plan</h2>
+          <p>Choose your preferred subscription plan.</p>
+          <div class="plans">
+            <label>
+              <input type="radio" name="plan" value="Basic" required>
+              <span>Basic - $10/mo</span>
+            </label>
+            <label>
+              <input type="radio" name="plan" value="Standard">
+              <span>Standard - $20/mo</span>
+            </label>
+            <label>
+              <input type="radio" name="plan" value="Premium">
+              <span>Premium - $30/mo</span>
+            </label>
+          </div>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="form-step">
+          <h2>Add-ons</h2>
+          <p>Select any optional add-ons.</p>
+          <label>
+            <input type="checkbox" name="addons" value="Cloud Storage">
+            Cloud Storage (+$5/mo)
+          </label>
+          <label>
+            <input type="checkbox" name="addons" value="Premium Support">
+            Premium Support (+$7/mo)
+          </label>
+          <label>
+            <input type="checkbox" name="addons" value="Extra Devices">
+            Extra Devices (+$3/mo)
+          </label>
+        </div>
+
+        <!-- Step 4 -->
+        <div class="form-step">
+          <h2>Summary</h2>
+          <div id="summary"></div>
+          <p>Please confirm your order before submitting.</p>
+        </div>
+        <!-- Thank You Step -->
+        <div class="form-step" id="thankYouStep">
+        <div class="thank-you">
+            <div class="checkmark">
+            <div class="checkmark-circle"></div>
+            <div class="checkmark-stem"></div>
+            <div class="checkmark-kick"></div>
+            </div>
+            <h2>Thank You!</h2>
+            <p>Your submission has been received successfully.</p>
+        </div>
+        </div>
+
+        <!-- Buttons -->
+        <div class="buttons">
+          <button type="button" id="prevBtn">Previous</button>
+          <button type="button" id="nextBtn">Next</button>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
