@@ -1,10 +1,8 @@
-/* ===== Global Reset ===== */
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
-
 body {
   font-family: Arial, sans-serif;
   background: #f5f7fb;
@@ -14,8 +12,6 @@ body {
   align-items: center;
   min-height: 100vh;
 }
-
-/* ===== Container ===== */
 .container {
   display: flex;
   background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(202,248,255,1) 0%, rgba(186,204,227,1) 51.2%, rgba(117,144,179,1) 100.1% );
@@ -24,9 +20,8 @@ body {
   max-width: 900px;
   width: 100%;
   overflow: hidden;
+  font-family: cursive;
 }
-
-/* ===== Sidebar Steps ===== */
 .steps {
   background:url(./assets/formsidebgimg.jpg)no-repeat center center;
   background-size: cover;
