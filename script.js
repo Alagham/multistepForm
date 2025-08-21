@@ -39,6 +39,7 @@ function validateStep() {
     if (!input.checkValidity()) {
       input.reportValidity();
       return false;
+      
     }
   }
   return true;

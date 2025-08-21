@@ -16,9 +16,9 @@ This project is part of my final assessment, demonstrating form handling, valida
 ✅ Smooth hover & focus states for accessibility
 
 📸 Screenshots
-Desktop
+Desktopview - [./assets/desktopview.png]
 
-Mobile
+Mobileview - [./assets/mobileview.png]
 
 🛠️ Technologies Used
 HTML5 → structure
@@ -72,13 +72,6 @@ Selection check before confirming
 Mobile-first approach
 
 Layout adjusts seamlessly for small screens, tablets, and desktops
-
-✨ Future Improvements
-Dark mode toggle 🌙
-
-LocalStorage save & restore form progress
-
-Yearly/Monthly plan toggle with updated pricing
 
 👨‍💻 Author
 Alagham
