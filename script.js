@@ -37,6 +37,7 @@ function validateStep() {
   const inputs = steps[currentStep].querySelectorAll("input[required]");
   for (let input of inputs) {
     if (!input.checkValidity()) {
+      
       input.reportValidity();
       return false;
     }
